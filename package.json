@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --dir src",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
+    "lint:style": "stylelint '**/*.{css,scss,sass}'",
+    "lint:style:fix": "stylelint --fix '**/*.{css,scss,sass}'"
   },
   "dependencies": {
     "next": "13.5.4",

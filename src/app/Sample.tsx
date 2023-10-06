@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import style from './Sample.module.scss'
 
 type SampleProps = {
   user: {
@@ -7,7 +8,7 @@ type SampleProps = {
 }
 
 export const Sample: FC<SampleProps> = ({ user }) => {
-  return <div>{user.age}</div>
+  return <div className={style.text}>{user.age}</div>
 }
 
 type User = {
