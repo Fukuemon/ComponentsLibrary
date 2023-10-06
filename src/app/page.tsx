@@ -1,13 +1,13 @@
-import { Sample } from "./Sample";
+import { Sample } from './Sample'
 
 const user = {
-  name: "John Doe",
-};
+  name: 'John Doe'
+}
 
 export default function Home() {
   return (
     <div>
       <Sample user={user} />
     </div>
-  );
+  )
 }

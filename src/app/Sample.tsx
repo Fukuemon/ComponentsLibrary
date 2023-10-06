@@ -1,36 +1,36 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 type SampleProps = {
   user: {
-    name: string;
-  };
-};
+    name: string
+  }
+}
 
 export const Sample: FC<SampleProps> = ({ user }) => {
-  return <div>{user.age}</div>;
-};
+  return <div>{user.age}</div>
+}
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
 export const Sample2 = () => {
   const user: User = {
-    name: "John",
-    age: 25,
-  };
-  return <div>{user.age}</div>;
-};
+    name: 'John',
+    age: 25
+  }
+  return <div>{user.age}</div>
+}
 
 export function getUser(): User {
   const user: any = {
-    name: "John",
-    age: 25,
-  };
-  return user; // user型はUser型ではなくany型
+    name: 'John',
+    age: 25
+  }
+  return user // user型はUser型ではなくany型
 }
 
 export const Sample3 = () => {
-  const user = getUser();
-  return <div>{user.age}</div>;
-};
+  const user = getUser()
+  return <div>{user.age}</div>
+}
