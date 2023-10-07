@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import style from './Sample.module.scss'
 
 type SampleProps = {
   user: {
@@ -8,7 +7,11 @@ type SampleProps = {
 }
 
 export const Sample: FC<SampleProps> = ({ user }) => {
-  return <div className={style.text}>{user.age}</div>
+  return (
+    <div className="flex justify-center p-8 text-lg">
+      <div>{user.name}</div>
+    </div>
+  )
 }
 
 type User = {
