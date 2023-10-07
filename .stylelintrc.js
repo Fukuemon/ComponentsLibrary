@@ -6,7 +6,13 @@ module.exports = {
     // クラス名でアンパサンド（&）は禁止（&:hoverなどはOK）
     'scss/selector-no-union-class-name': true,
     // シングルクォーテーションに統一
-    'string-quotes': 'single'
+    'string-quotes': 'single',
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['apply', 'layer', 'responsive', 'screen', 'tailwind']
+      }
+    ]
   },
   ignoreFiles: ['**/node_modules/**']
 }
