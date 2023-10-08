@@ -14,3 +14,4 @@
 ## 📗ドキュメント
 以下に手順などを記載
 #### [🎉セットアップ〜リンター・フォーマッター設定](docs/setup.md)
+#### [⚙️SassとTailwindCSSの設定](docs/stylerule.md)
