@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button'
 import { Sample } from './Sample'
 import ShadcnButtons from './_components/Shadcn/Button'
 
