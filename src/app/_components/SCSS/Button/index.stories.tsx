@@ -2,7 +2,17 @@ import { StoryObj, Meta } from '@storybook/react'
 import { Button } from './index'
 
 const meta: Meta<typeof Button> = {
-  component: Button
+  component: Button,
+  argTypes: {
+    label: {
+      control: 'text',
+      defaultValue: 'Button'
+    },
+    primary: {
+      control: 'boolean',
+      defaultValue: false
+    }
+  }
 }
 
 export default meta
@@ -14,5 +24,8 @@ export const Default: Story = {
 }
 
 export const Primary: Story = {
-  render: () => <Button label="ぷらいまりぃ" primary />
+  args: {
+    label: 'プライマリー',
+    primary: true
+  }
 }
