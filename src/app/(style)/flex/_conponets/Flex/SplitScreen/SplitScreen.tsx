@@ -1,20 +1,21 @@
 import styles from './styles.module.scss'
 
 type SplitScreenProps = {
-  left: React.FC
-  right: React.FC
+  children: React.ReactNode[]
   leftWeight?: number
   rightWeight?: number
 }
 
-export const SplitScreen = ({ left: Left, right: Right, leftWeight, rightWeight }: SplitScreenProps) => {
+export const SplitScreen = ({ children, leftWeight, rightWeight }: SplitScreenProps) => {
+  const [left, right] = children
+
   return (
     <div className={styles.container}>
       <div className={styles.pane} style={{ flex: leftWeight }}>
-        <Left />
+        {left}
       </div>
       <div className={styles.pane} style={{ flex: rightWeight }}>
-        <Right />
+        {right}
       </div>
     </div>
   )
