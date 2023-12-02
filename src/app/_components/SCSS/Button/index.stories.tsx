@@ -3,7 +3,11 @@ import { Button } from './index'
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  tags: ['autodocs'],
   argTypes: {
+    onClick: {
+      action: 'clicked'
+    },
     label: {
       control: 'text',
       defaultValue: 'Button'

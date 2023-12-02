@@ -5,11 +5,12 @@ import styles from './style.module.scss'
 interface ButtonProps {
   label: string
   primary?: boolean
+  onClick?: () => void
 }
 
-export const Button: FC<ButtonProps> = ({ label, primary, ...args }) => {
+export const Button: FC<ButtonProps> = ({ label, primary, onClick, ...args }) => {
   return (
-    <button className={clsx(styles.button, { [styles.primary]: primary })} {...args}>
+    <button className={clsx(styles.button, { [styles.primary]: primary })} onClick={onClick} {...args}>
       {label}
     </button>
   )
