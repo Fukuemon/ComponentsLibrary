@@ -1,4 +1,4 @@
-import './globals.scss'
+import '@/styles/globals.scss'
 import '@/styles/tailwind.css'
 import styles from './layout.module.scss'
 import type { Metadata } from 'next'
