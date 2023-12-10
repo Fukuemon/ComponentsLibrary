@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@include mq('sm') {
+  .container {
+    flex-direction: column;
+  }
+}
