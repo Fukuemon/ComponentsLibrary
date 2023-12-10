@@ -12,5 +12,8 @@ const imports = scssFiles.map((file) => `@import '@/styles/common/${file}';`).jo
 module.exports = {
   sassOptions: {
     additionalData: imports
+  },
+  compiler: {
+    styledComponents: true
   }
 }
