@@ -1,0 +1,56 @@
+// Flex.module.scss
+
+/* Flex Direction Styles */
+.flexRow {
+  flex-direction: row;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+/* Align Items Styles */
+.alignItemsFlexStart {
+  align-items: flex-start;
+}
+
+.alignItemsFlexEnd {
+  align-items: flex-end;
+}
+
+.alignItemsCenter {
+  align-items: center;
+}
+
+.alignItemsBaseline {
+  align-items: baseline;
+}
+
+.alignItemsStretch {
+  align-items: stretch;
+}
+
+/* Justify Content Styles */
+.justifyContentFlexStart {
+  justify-content: flex-start;
+}
+
+.justifyContentFlexEnd {
+  justify-content: flex-end;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+
+.justifyContentSpaceEvenly {
+  justify-content: space-evenly;
+}
