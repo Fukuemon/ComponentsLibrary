@@ -22,6 +22,7 @@
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
+    "styled-components": "^6.1.1",
     "stylelint-config-recommended-scss": "^13.0.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
@@ -38,6 +39,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.32",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10",
