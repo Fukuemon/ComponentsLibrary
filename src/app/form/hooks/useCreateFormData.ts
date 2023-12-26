@@ -1,8 +1,8 @@
 'use client'
-import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { useFileInput } from '../components/FileInput/FileInput.hooks'
 
 const PostSchema = z.object({
   title: z.string(),
@@ -21,8 +21,9 @@ const PostSchema = z.object({
 type PostType = z.infer<typeof PostSchema>
 
 export const useCreateFormData = () => {
-  const [image, setImage] = useState<File | null>(null)
-  const [model, setModel] = useState<File | null>(null)
+  const { file: imageFile, preview: imagePreview, handleChangeFile: handleImageChange } = useFileInput()
+  const { file: modelFile, preview: modelPreview, handleChangeFile: handleModelChange } = useFileInput()
+
   const form = useForm<PostType>({
     resolver: zodResolver(PostSchema),
     defaultValues: {
@@ -33,11 +34,14 @@ export const useCreateFormData = () => {
       tags: []
     }
   })
+
   return {
     form,
-    image,
-    setImage,
-    model,
-    setModel
+    imageFile,
+    imagePreview,
+    handleImageChange,
+    modelFile,
+    modelPreview,
+    handleModelChange
   }
 }

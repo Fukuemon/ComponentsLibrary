@@ -2,7 +2,7 @@ import React from 'react'
 
 export const useFileInput = () => {
   const [file, setFile] = React.useState<File | null>(null)
-  const [preview, setPreview] = React.useState('/image/no_image.png')
+  const [preview, setPreview] = React.useState('')
   const handleChangeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
