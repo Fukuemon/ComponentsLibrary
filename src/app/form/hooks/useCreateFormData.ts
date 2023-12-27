@@ -35,8 +35,30 @@ export const useCreateFormData = () => {
     }
   })
 
+  const onSubmit = (data: PostType) => {
+    console.log(data)
+    try {
+      const formData = new FormData()
+      formData.append('title', data.title)
+      if (data.image) {
+        formData.append('image', data.image)
+      }
+      if (data.model) {
+        formData.append('model', data.model)
+      }
+      formData.append('contents', data.contents)
+      formData.append('tags', JSON.stringify(data.tags))
+
+      //memo: // スプレッド構文でformDataを展開すると、formData.entries()と同じ結果が得られる
+      console.log([...formData])
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return {
     form,
+    onSubmit,
     imageFile,
     imagePreview,
     handleImageChange,

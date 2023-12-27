@@ -7,10 +7,10 @@ import { useCreateFormData } from '../hooks/useCreateFormData'
 import { FileInput } from './FileInput/FileInput'
 
 export const PostForm = () => {
-  const { form, imagePreview, handleImageChange, modelPreview, handleModelChange } = useCreateFormData()
+  const { form, onSubmit, imagePreview, handleImageChange, modelPreview, handleModelChange } = useCreateFormData()
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit((data) => console.log(data))} className="flex flex-col gap-24">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-24">
         <FormField
           control={form.control}
           name="title"
@@ -36,11 +36,14 @@ export const PostForm = () => {
                     <FileInput
                       fileType="image/*"
                       preview={imagePreview}
-                      handleChangeFile={handleImageChange}
-                      {...field}
-                      onChange={(e) => {
-                        field.onChange(e)
+                      handleChangeFile={(e) => {
+                        const file: File | undefined = e.target.files ? e.target.files[0] : undefined
+                        if (!file) return
+                        handleImageChange(e)
+                        field.onChange(e.target.files)
                       }}
+                      // memo: file属性にtype="file"を指定している場合、value属性は空にする必要がある
+                      {...{ ...field, value: undefined }}
                     />
                   </FormControl>
                   <FormMessage />
@@ -59,11 +62,13 @@ export const PostForm = () => {
                     <FileInput
                       fileType=".glb"
                       preview={modelPreview}
-                      handleChangeFile={handleModelChange}
-                      {...field}
-                      onChange={(e) => {
-                        field.onChange(e)
+                      handleChangeFile={(e) => {
+                        const file: File | undefined = e.target.files ? e.target.files[0] : undefined
+                        if (!file) return
+                        handleModelChange(e)
+                        field.onChange(e.target.files)
                       }}
+                      {...{ ...field, value: undefined }}
                     />
                   </FormControl>
                   <FormMessage />
