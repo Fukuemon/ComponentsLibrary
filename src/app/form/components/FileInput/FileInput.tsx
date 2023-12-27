@@ -24,13 +24,13 @@ export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
           {...props}
           onChange={handleChangeFile}
         />
-        <div className="w-[300px] h-[250px] relative">
+        <div className="w-[300px] h-[200px] relative border m-2">
           {preview ? (
             fileType === 'image/*' ? (
               <Image
                 src={preview}
                 alt="preview"
-                className="object-container max-h-96 max-w-[300px]"
+                className=" object-container"
                 // width={300}
                 // height={300}
                 fill
