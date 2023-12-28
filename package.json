@@ -15,17 +15,23 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@google/model-viewer": "^3.3.0",
+    "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "blueimp-load-image": "^5.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
     "styled-components": "^6.1.1",
     "stylelint-config-recommended-scss": "^13.0.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.6",
